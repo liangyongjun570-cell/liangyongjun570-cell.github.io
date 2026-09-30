@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><search><entry><title>Hello World</title><content>&lt;p&gt;欢迎来到我的博客！这是第一篇文章。&lt;/p&gt;
+&lt;h2 id=&quot;快速开始&quot;&gt;&lt;a href=&quot;#快速开始&quot; class=&quot;headerlink&quot; title=&quot;快速开始&quot;&gt;&lt;/a&gt;快速开始&lt;/h2&gt;&lt;p&gt;你可以通过编辑 &lt;code&gt;source/_posts/&lt;/code&gt; 目录下的文件来创建新文章。&lt;/p&gt;
+&lt;h3 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new &lt;span class=&quot;string&quot;&gt;&amp;quot;文章标题&amp;quot;&lt;/span&gt;    &lt;span class=&quot;comment&quot;&gt;# 新建文章&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo generate          &lt;span class=&quot;comment&quot;&gt;# 生成静态文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo server            &lt;span class=&quot;comment&quot;&gt;# 启动本地服务&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo deploy            &lt;span class=&quot;comment&quot;&gt;# 部署到远程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;Markdown-示例&quot;&gt;&lt;a href=&quot;#Markdown-示例&quot; class=&quot;headerlink&quot; title=&quot;Markdown 示例&quot;&gt;&lt;/a&gt;Markdown 示例&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;粗体&lt;/strong&gt; 和 &lt;em&gt;斜体&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hexo.io/&quot;&gt;链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;代码块&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引用文本&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;祝你写作愉快！&lt;/p&gt;
+</content><url>2026/09/30/hello-world/</url></entry></search>

@@ -1,0 +1,128 @@
+:root {
+  --junjun-accent: #4f7cff;
+  --junjun-accent-soft: rgba(79, 124, 255, 0.12);
+  --junjun-card-radius: 18px;
+}
+
+body {
+  background-color: #f5f7fb;
+  background-image: radial-gradient(ellipse at 12% 4%, rgba(104, 154, 255, .10), transparent 32%),
+    radial-gradient(ellipse at 88% 22%, rgba(126, 102, 255, .07), transparent 30%);
+}
+
+#page-header.full_page {
+  min-height: 420px;
+  height: 48vh;
+  max-height: 620px;
+  background: linear-gradient(135deg, #182c50 0%, #345fa3 52%, #718bd6 100%);
+}
+
+#page-header.full_page::before {
+  background: linear-gradient(120deg, rgba(12, 24, 45, .34), rgba(28, 49, 91, .12));
+}
+
+#site-info {
+  animation: junjun-rise .7s ease both;
+}
+
+#site-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 750;
+  letter-spacing: .04em;
+  text-shadow: 0 8px 28px rgba(12, 24, 45, .24);
+}
+
+#site-subtitle {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: .08em;
+}
+
+#nav {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, .86);
+  box-shadow: 0 4px 24px rgba(31, 45, 75, .06);
+}
+
+#recent-posts > .recent-post-item,
+.card-widget,
+.layout > div:first-child:not(.recent-posts) {
+  border: 1px solid rgba(105, 125, 165, .09);
+  border-radius: var(--junjun-card-radius);
+  box-shadow: 0 8px 28px rgba(40, 56, 91, .055);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+#recent-posts > .recent-post-item:hover,
+.card-widget:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(40, 56, 91, .10);
+}
+
+#recent-posts > .recent-post-item .post_cover img {
+  transition: transform .45s ease;
+}
+
+#recent-posts > .recent-post-item:hover .post_cover img {
+  transform: scale(1.045);
+}
+
+.card-info .avatar-img img {
+  border: 4px solid rgba(79, 124, 255, .12);
+  box-shadow: 0 8px 22px rgba(79, 124, 255, .18);
+}
+
+#aside-content .card-info .author-info-name {
+  font-weight: 700;
+}
+
+.site-data a .length-num {
+  color: var(--junjun-accent);
+  font-weight: 700;
+}
+
+#pagination .page-number.current,
+#pagination .page-number:hover,
+#card-info-btn,
+.article-meta__separator {
+  background: var(--junjun-accent);
+}
+
+a:hover,
+#article-container a {
+  color: var(--junjun-accent);
+}
+
+#footer {
+  background: linear-gradient(135deg, #20385f, #385c98);
+}
+
+@keyframes junjun-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  #page-header.full_page {
+    min-height: 360px;
+    height: 54vh;
+  }
+
+  #site-subtitle {
+    padding: 0 1.5rem;
+    line-height: 1.8;
+  }
+
+  #recent-posts > .recent-post-item,
+  .card-widget {
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
