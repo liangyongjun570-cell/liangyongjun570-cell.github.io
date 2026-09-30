@@ -3,6 +3,7 @@
 
 const Hexo = require('hexo');
 const path = require('path');
+const fs = require('fs');
 
 const projectDir = path.resolve(__dirname);
 const args = process.argv.slice(2);
@@ -23,13 +24,29 @@ const hexo = new Hexo(projectDir, {
 // Set global hexo so plugins can register themselves
 global.hexo = hexo;
 
+function loadScripts(dir) {
+  if (!fs.existsSync(dir)) return;
+  const items = fs.readdirSync(dir);
+  items.forEach(item => {
+    const fullPath = path.join(dir, item);
+    if (fs.statSync(fullPath).isDirectory()) {
+      loadScripts(fullPath);
+    } else if (item.endsWith('.js')) {
+      try { require(fullPath); } catch (e) {}
+    }
+  });
+}
+
 hexo.init().then(() => {
-  // Load external plugins (they register via global.hexo)
+  // Load external plugins
   const pkg = require('./package.json');
   const deps = Object.keys(pkg.dependencies || {});
   deps.filter(d => d.startsWith('hexo-') && !d.includes('theme')).forEach(dep => {
     try { require(path.join(projectDir, 'node_modules', dep)); } catch (e) {}
   });
+
+  // Load theme scripts
+  loadScripts(path.join(projectDir, 'themes', 'landscape', 'scripts'));
 
   if (command === 'server' || command === 's') {
     return hexo.call('server', options);

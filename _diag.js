@@ -1,0 +1,10 @@
+const Hexo = require('hexo');
+const hexo = new Hexo(__dirname, {debug:true});
+hexo.init().then(async ()=>{
+  console.log('TITLE=', hexo.config.title);
+  console.log('THEME=', hexo.config.theme);
+  console.log('BASE=', hexo.base_dir);
+  console.log('THEME_DIR=', hexo.theme_dir);
+  console.log('ENV=', JSON.stringify(hexo.env));
+  console.log('GENS=', Object.keys(hexo.extend.generator.list()));
+}).catch(e=>console.error('FATAL', e && e.stack || e));
